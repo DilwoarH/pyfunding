@@ -1,0 +1,18 @@
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Donate &pound;{{ display_amount }} towards a PyCon ticket</h5>
+        <p class="card-text">This will support those who cannot afford a PyCon ticket.</p>
+        <form action="{{ url_for('charge') }}" method="POST">
+            <script
+                src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                data-key="{{ stripe_publishable_key }}"
+                data-amount="{{ stripe_amount }}"
+                data-name="PyFunding"
+                data-description="Fund a PyCon ticket"
+                data-image="{{ url_for('static', filename='images/pycon.png') }}"
+                data-locale="auto"
+                data-currency="gbp">
+            </script>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+ 
+{% block body %}
+<div class="row">
+    <div class="col-md-4 mb-5">
+        {% with stripe_amount="100", display_amount="1" %}
+            {% include 'components/stripe.html' %}
+        {% endwith %}
+    </div>
+    <div class="col-md-4 mb-5">
+        {% with stripe_amount="1000", display_amount="10" %}
+            {% include 'components/stripe.html' %}
+        {% endwith %}
+    </div>
+    <div class="col-md-4 mb-5">
+        {% with stripe_amount="10000", display_amount="100" %}
+            {% include 'components/stripe.html' %}
+        {% endwith %}
+    </div>
+    <div class="col-md-4 mb-5">
+        {% with stripe_amount="100000", display_amount="1000" %}
+            {% include 'components/stripe.html' %}
+        {% endwith %}
+    </div>
+</div>
+{% endblock %}
