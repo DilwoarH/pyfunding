@@ -30,3 +30,7 @@ CVC         = 123
 ```
 FLASK_APP=index.py flask run
 ```
+or 
+```
+gunicorn index:app
+```
