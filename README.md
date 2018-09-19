@@ -2,6 +2,10 @@
 
 Crowdfunding platform to help fund tickets for those who cannot afford to pay but love Python.
 
+## Demo
+
+https://pyfunding.herokuapp.com/
+
 ## Setting up env variables
 
 ### Stripe API keys
