@@ -13,7 +13,7 @@ export STRIPE_API_KEY=sk_test_....
 export STRIPE_PUBLISHABLE_KEY=pk_test_.....
 ```
 
-### Stripe test card details
+### Stripe test card details
 
 ```
 CARD NUMBER = 4242 4242 4242 4242
