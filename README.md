@@ -1,3 +1,5 @@
+![alt text](https://github.com/DilwoarH/pyfunding/raw/master/static/images/pycon.png)
+
 # PyFunding
 
 Crowdfunding platform to help fund tickets for those who cannot afford to pay but love Python.
