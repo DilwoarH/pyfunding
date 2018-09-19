@@ -1,6 +1,5 @@
 import stripe
-import json
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 import os
 
 app = Flask(__name__)
@@ -37,4 +36,15 @@ def charge():
     except stripe.error.InvalidRequestError as e:
         return e.json_body['error']['message']
     
-    return json.dumps(charge)
+    if charge['status'] == "succeeded":
+        return redirect(url_for('success'))
+    else:
+        return redirect(url_for('error'))
+
+@app.route("/success", methods=["GET"])
+def success():
+    return render_template('success.html')
+
+@app.route("/error", methods=["GET"])
+def error():
+    return render_template('error.html')
